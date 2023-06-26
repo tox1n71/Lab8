@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="771.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itmo.lab8.lab8v2.AddIfMinController">
+    <VBox alignment="CENTER" layoutX="179.0" layoutY="72.0" spacing="10.0">
+        <Label fx:id="addingLabel" text="Добавление нового работника">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <GridPane alignment="CENTER" hgap="10.0" vgap="10.0">
+            <Label fx:id="nameLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label fx:id="coordinatesXLabel" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="coordinatesXField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="coordinatesYLabel" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="coordinatesYField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="salaryLabel" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="salaryField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="startDateLabel" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <DatePicker fx:id="startDateField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="endDateLabel" text="Дата окончания работы:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <DatePicker fx:id="endDateField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="positionLabel" text="Должность:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <ChoiceBox fx:id="positionBox" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="organizationFullNameLabel" text="Название организации:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <TextField fx:id="organizationFullNameField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label fx:id="organizationAnnualTurnoverLabel" text="Годовой оборот организации:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+            <TextField fx:id="organizationAnnualTurnoverField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label fx:id="organizationEmployeesCountLabel" text="Количество сотрудников организации:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+            <TextField fx:id="organizationEmployeesCountField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label fx:id="organizationAddressStreetLabel" text="Адрес организации (улица):" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+            <TextField fx:id="organizationAddressStreetField" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label fx:id="organizationAddressZipCodeLabel" text="Адрес организации (индекс):" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+            <TextField fx:id="organizationAddressZipCodeField" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Label fx:id="organizationAddressTownLabel" text="Адрес организации (город):" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+            <TextField fx:id="organizationAddressTownField" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Label fx:id="organizationAddressLocationXLabel" text="Адрес организации (координата X):" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+            <TextField fx:id="organizationAddressLocationXField" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <Label fx:id="organizationAddressLocationYLabel" text="Адрес организации (координата Y):" GridPane.columnIndex="0" GridPane.rowIndex="15" />
+            <TextField fx:id="organizationAddressLocationYField" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <Label fx:id="organizationAddressLocationZLabel" text="Адрес организации (координата Z):" GridPane.columnIndex="0" GridPane.rowIndex="16" />
+            <TextField fx:id="organizationAddressLocationZField" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+            <Button fx:id="submitButton" onAction="#handleAddButtonAction" text="Добавить" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+        <Label fx:id="responseLabel" text="" />
+    </VBox>
+</AnchorPane>

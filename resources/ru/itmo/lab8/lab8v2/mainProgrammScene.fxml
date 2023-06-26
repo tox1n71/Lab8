@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="818.0" minWidth="1500.0" prefHeight="836.0" prefWidth="2003.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itmo.lab8.lab8v2.MainProgrammController">
+    <children>
+        <AnchorPane prefHeight="129.0" prefWidth="1543.0" style="-fx-background-color: #333;">
+            <children>
+            <Label fx:id="userName" layoutX="781.0" layoutY="42.0" prefHeight="51.0" prefWidth="341.0" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentUserLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="475.0" layoutY="39.0" prefHeight="57.0" prefWidth="306.0" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="languageChoiceBox" layoutX="169.0" layoutY="53.0" prefWidth="150.0" />
+            <Button fx:id="logOutButton" layoutX="1095.0" layoutY="33.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" prefHeight="70.0" prefWidth="368.0" />
+            <ImageView fx:id="imageView" fitHeight="79.0" fitWidth="110.0" layoutX="48.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+      <ScrollPane fx:id="scrollPane" layoutX="348.0" layoutY="167.0" prefHeight="594.0" prefWidth="1115.0">
+         <content>
+            <TableView fx:id="workerTable" prefHeight="605.0" prefWidth="2691.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="116.34698486328125" />
+                <TableColumn fx:id="ownerColumn" prefWidth="97.26229858398438" />
+                  <TableColumn fx:id="nameColumn" prefWidth="74.3299560546875" />
+                  <TableColumn fx:id="coordinatesXColumn" prefWidth="100.492431640625" />
+                  <TableColumn fx:id="coordinatesYColumn" prefWidth="112.007568359375" />
+                  <TableColumn fx:id="creationDateColumn" prefWidth="129.5772705078125" />
+                  <TableColumn fx:id="salaryColumn" minWidth="0.86553955078125" prefWidth="78.66998291015625" />
+                  <TableColumn fx:id="startDateColumn" minWidth="0.0" prefWidth="87.0206298828125" />
+                  <TableColumn fx:id="endDateColumn" prefWidth="102.71875" />
+                  <TableColumn fx:id="positionColumn" prefWidth="146.9964599609375" />
+                  <TableColumn fx:id="organizationFullNameColumn" prefWidth="221.5001220703125" />
+                  <TableColumn fx:id="organizationEmployeesCountColumn" minWidth="0.0" prefWidth="194.6485595703125" />
+                  <TableColumn fx:id="organizationAnnualTurnoverColumn" minWidth="0.0" prefWidth="224.1524658203125" />
+                  <TableColumn fx:id="organizationAddressStreetColumn" minWidth="0.0" prefWidth="140.999755859375" />
+                  <TableColumn fx:id="organizationAddressZipCodeColumn" minWidth="0.0" prefWidth="165.00048828125" />
+                  <TableColumn fx:id="organizationAddressTownColumn" minWidth="0.0" prefWidth="192.522216796875" />
+                  <TableColumn fx:id="organziationAddressLocationXColumn" minWidth="0.0" prefWidth="127.477783203125" />
+                  <TableColumn fx:id="organziationAddressLocationYColumn" minWidth="0.0" prefWidth="186.80859375" />
+                  <TableColumn fx:id="organziationAddressLocationZColumn" prefWidth="185.191650390625" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="addButton" layoutX="186.0" layoutY="176.0" mnemonicParsing="false" onAction="#addButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Add" />
+      <Button fx:id="editButton" layoutX="186.0" layoutY="229.0" mnemonicParsing="false" onAction="#setEditButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Edit" />
+      <TextField fx:id="nameFilter" layoutX="347.0" layoutY="133.0" prefHeight="26.0" prefWidth="76.0" promptText="name filter" />
+      <Button fx:id="removeButton" layoutX="186.0" layoutY="282.0" mnemonicParsing="false" onAction="#onRemoveButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Remove" />
+      <Button fx:id="clearButton" layoutX="186.0" layoutY="335.0" mnemonicParsing="false" onAction="#onClearButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Clear" />
+      <Button fx:id="historyButton" layoutX="26.0" layoutY="335.0" mnemonicParsing="false" onAction="#onHistoryButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="History" />
+      <Button fx:id="infoButton" layoutX="26.0" layoutY="283.0" mnemonicParsing="false" onAction="#onInfoButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Info" />
+      <Button fx:id="minByNameButton" layoutX="26.0" layoutY="230.0" mnemonicParsing="false" onAction="#onMinByNameButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Min by name" />
+      <Button fx:id="sortDescendingButton" layoutX="25.0" layoutY="177.0" mnemonicParsing="false" onAction="#onSortDescendingButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Sort descending" />
+      <AnchorPane fx:id="canvasPane" layoutX="348.0" layoutY="171.0" maxHeight="587.0" maxWidth="1118.0" minHeight="587.0" minWidth="1118.0" prefHeight="587.0" prefWidth="1118.0" style="-fx-background-color: #333;">
+         <children>
+            <ImageView fx:id="dota" fitHeight="750.0" fitWidth="1297.0" layoutX="-4.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dota.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ToggleButton fx:id="visualButton" layoutX="345.0" layoutY="780.0" mnemonicParsing="false" onAction="#visualizationButtonOnClick" prefHeight="42.0" prefWidth="144.0" text="Visualization" />
+      <Button fx:id="removeLowerButton" layoutX="26.0" layoutY="392.0" mnemonicParsing="false" onAction="#RemoveLowerButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Remove lower" />
+      <Button fx:id="executeScriptButton" layoutX="186.0" layoutY="392.0" mnemonicParsing="false" onAction="#setExecuteScriptButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Execute script" />
+      <Button fx:id="helpButton" layoutX="25.0" layoutY="449.0" mnemonicParsing="false" onAction="#helpButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Help" />
+      <Label fx:id="serverResponse" alignment="CENTER" contentDisplay="CENTER" layoutX="426.0" layoutY="129.0" prefHeight="34.0" prefWidth="481.0" />
+      <Button fx:id="addIfMinButton" layoutX="188.0" layoutY="449.0" mnemonicParsing="false" onAction="#addIfMinButtonOnClick" prefHeight="44.0" prefWidth="133.0" text="Add if min" />
+    </children>
+</AnchorPane>
